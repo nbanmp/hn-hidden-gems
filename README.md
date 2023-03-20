@@ -26,8 +26,8 @@ RSS feed hosted here: https://hn.invades.space/hn_gems_rss.xml
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/nbanmp/hn-commented-links.git
-cd hn-commented-links
+git clone https://github.com/nbanmp/hn-hidden-gems.git
+cd hn-hidden-gems
 ```
 
 2. Install the required packages:
