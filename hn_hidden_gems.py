@@ -80,7 +80,7 @@ def read_existing_feed_items(filename: str) -> set:
     return existing_feed.entries
 
 
-def generate_rss_feed(comments_with_url, filename="www/hn_top_comments_rss.xml"):
+def generate_rss_feed(comments_with_url, filename):
     existing_items = read_existing_feed_items(filename)
 
     feed = Rss201rev2Feed(
@@ -127,8 +127,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Fetch top HN comments containing URLs")
     parser.add_argument("--depth", type=int, default=5, help="Depth of comments to read on each post (default: 5)")
     parser.add_argument("--min-score", type=int, default=50, help="Minimum score a post should have (default: 50)")
+    parser.add_argument("--output", type=str, default="hn_gems.xml", help="Output file path (default: hn_gems.xml)")
     args = parser.parse_args()
 
     comments_with_url = get_top_comments_with_url(args.min_score, args.depth)
-    generate_rss_feed(comments_with_url)
+    generate_rss_feed(comments_with_url, filename=args.output)
 

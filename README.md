@@ -35,25 +35,28 @@ pip install -r requirements.txt
 ```
 
 ## Usage
-Run the script with the default settings:
+To generate the RSS feed with the top HN comments containing URLs, run the following command:
 
 ```bash
-python hn_hidden_gems.py
+python hn_hidden_gems.py [--depth DEPTH] [--min-score MIN_SCORE] [--output OUTPUT]
 ```
 
-The default settings fetch the top 5 comments from each story with a minimum score of 50.
+Optional arguments:
 
-Use the `--depth` and `--min-score` arguments to customize the search:
+- `--depth DEPTH`: Depth of comments to read on each post (default: 5)
+- `--min-score MIN_SCORE`: Minimum score a post should have (default: 50)
+- `--output OUTPUT`: Output file path (default: `hn_gems.xml`)
+
+Example:
 
 ```bash
-python hn_hidden_gems.py --depth 10 --min-score 100
+python hn_hidden_gems.py --depth 5 --min-score 50 --output my_output_file.xml
 ```
 
-This command fetches the top 10 comments from each story with a minimum score of 100.
+This command will generate an RSS feed with the top comments containing URLs from the top stories and save it to the specified output file (my_output_file.xml).
 
-The script generates an RSS feed file named `www/hn_top_comments_rss.xml` with the latest URLs from top comments. You can use any RSS feed reader to subscribe to the feed and receive updates.
+You can then use an RSS reader to subscribe to the generated feed and discover interesting content shared in the comments on Hacker News.
+
 
 ##Contributing
 Contributions are welcome! Please submit a pull request or create an issue with your ideas, suggestions, or bug reports.
-
-
