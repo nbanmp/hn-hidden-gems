@@ -111,7 +111,7 @@ def generate_rss_feed(comments_with_url, filename):
             pub_date = datetime.utcfromtimestamp(comment['time']).replace(tzinfo=pytz.UTC)
 
             feed.add_item(
-                title=f"HN Gem: {base_domain} - {comment['by']}",
+                title=f"HN Gems: {base_domain} - {comment['by']}",
                 link=url,
                 description=f"{comment['text']}<br><small>Posted: {pub_date}</small>",
                 author_name=comment['by'],
