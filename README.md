@@ -2,6 +2,8 @@
 
 Discover the best URLs hidden in top Hacker News comments with this simple Python script that generates an RSS feed of the top comments containing URLs from the latest Hacker News stories.
 
+RSS feed hosted here: https://hn.invades.space/hn_gems_rss.xml
+
 ## Features
 
 - Fetches top 100 Hacker News stories
