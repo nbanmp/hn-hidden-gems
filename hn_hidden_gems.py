@@ -64,7 +64,7 @@ def get_top_comments_with_url(min_score: int, depth: int):
             if url and 'kids' in comment:
                 base_domain = get_base_domain(url)
 
-                if base_domain not in ["news.ycombinator.com", "archive.ph", "archive.md", "archive.is"]:
+                if base_domain not in ["news.ycombinator.com", "archive.ph", "archive.md", "archive.is", "github.com"]:
                     comment['story_title'] = story['title']
                     comments_with_url.append(comment)
 
